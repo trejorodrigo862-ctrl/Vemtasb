@@ -5,28 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Venta Banda</title>
 
-    <!-- Manifest (sin carpetas inventadas) -->
-    <link rel="manifest" href="./public/manifest.json" />
-
-    <!-- Babel para compilar JSX en el navegador -->
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-
-    <!-- React y ReactDOM para el navegador -->
-    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-
-    <!-- Service Worker -->
-    <script>
-      if ("serviceWorker" in navigator) {
-        navigator.serviceWorker.register("./public/sw.js");
-      }
-    </script>
+    <link rel="manifest" href="/Ventabnda-271/manifest.json" />
   </head>
 
   <body>
     <div id="root"></div>
 
-    <!-- Tu App React compilada por Babel -->
-    <script type="text/babel" data-type="module" src="./src/index.jsx"></script>
+    <script type="module" src="/src/index.jsx"></script>
+
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("/Ventabnda-271/sw.js");
+      }
+    </script>
   </body>
 </html>
