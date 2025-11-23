@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.tsx'; 
-import { AppProvider } from '@/context/AppContext';
-import '@/index.css'; // <-- RUTA CORREGIDA: Usa el alias '@/index.css'
+// Importar solo los estilos de Tailwind base para que el CSS funcione
+import './index.css'; 
 
 const rootElement = document.getElementById('root');
 if (!rootElement) {
@@ -12,8 +12,7 @@ if (!rootElement) {
 const root = ReactDOM.createRoot(rootElement);
 root.render(
   <React.StrictMode>
-    <AppProvider>
-      <App />
-    </AppProvider>
+    {/* Solo monta el componente App */}
+    <App /> 
   </React.StrictMode>
 );
